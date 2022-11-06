@@ -10,7 +10,7 @@
 name: Second Issue Test
 on:
   schedule:
-    - cron: 10 17 6 11 *
+    - cron: 30 11,23 * * *
 
 jobs:
   create_issue:
@@ -28,16 +28,16 @@ jobs:
           body: |
             ### Agenda
 
-            - [ ] task 1
-            - [ ] task 2
-            - [ ] task 3
-            - [ ] task 4
+            - [ ] task 5
+            - [ ] task 6
+            - [ ] task 7
+            - [ ] task 8
                     
             ### Discussion Points
             Add things to discuss below
 
-            - [Work this week](https://github.com/orgs/github/projects/3)
+            - [Work this week](https://github.com/mghpcsim/issuetest/wiki)
           pinned: false
-          close-previous: false
+          close-previous: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
